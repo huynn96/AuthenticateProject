@@ -15,4 +15,7 @@ router.get('/edit', (request, response, next) => {
 router.get('/detail', (request, response, next) => {
 	response.render('detail.html');
 });
+router.get('/password', (request, response, next) => {
+    response.render('password.html');
+});
 module.exports = router;

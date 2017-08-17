@@ -5,3 +5,12 @@
 .image .image-detail {
     margin-top: 10px;
 }
+
+.detail-transfer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.detail-transfer .change-pw {
+    margin-left: 40px;
+}
