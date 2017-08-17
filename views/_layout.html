@@ -18,6 +18,13 @@
   			<div class='alert alert-danger'>{{ err.msg }}</div>
 		{% endfor %}
 
+		{% if (success_msg != "") %}
+			<div class='alert alert-success'>{{ success_msg }}</div>
+		{% elif (error_msg != "") %}
+			<div class='alert alert-danger'>{{ error_msg }}</div>
+		{% elif (error != "") %}
+			<div class='alert alert-danger'>{{ error }}</div>
+		{% endif %}
 
 		{% block content %}
 		{% endblock %}

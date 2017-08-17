@@ -2,19 +2,19 @@
 {% extends '_layout.html' %}
 
 {% block content %}
-<form class="form-horizontal">
+<form class="form-horizontal" action='/login' method='post'>
     <div class="form-group">
         <div class="col-md-2"></div>
-        <label class="control-label col-sm-2" for="email">User name:</label>
+        <label class="control-label col-sm-2" for="user-name">User name:</label>
         <div class="col-sm-4">
-            <input type="email" class="form-control" id="email" placeholder="Your user name">
+            <input type="text" class="form-control" id="user-name" name='username' placeholder="Your user name">
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-2"></div>
         <label class="control-label col-sm-2" for="pwd">Password:</label>
         <div class="col-sm-4">
-            <input type="password" class="form-control" id="pwd" placeholder="Your password">
+            <input type="password" class="form-control" id="pwd" name='password' placeholder="Your password">
         </div>
     </div>
     <div class="form-group">
