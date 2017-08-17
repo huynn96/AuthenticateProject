@@ -14,8 +14,13 @@
 	<hr>
 	
 	<div class="container container-fluid">
-	{% block content %}
-	{% endblock %}
+		{% for err in errors %}
+  			<div class='alert alert-danger'>{{ err.msg }}</div>
+		{% endfor %}
+
+
+		{% block content %}
+		{% endblock %}
 	</div>
 </body>
 </html>

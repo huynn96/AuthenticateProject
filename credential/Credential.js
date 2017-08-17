@@ -1,10 +1,11 @@
+const bcrypt = require('bcryptjs');
+
 class Credential {
 
-	constructor (provider, providerId, username, password) {
+	constructor (provider, providerId, username) {
 		this.provider = provider;
 		this.providerId = providerId;
 		this.username = username;
-		this.password = password;
 	}
 
 	setId (id) {
@@ -12,6 +13,11 @@ class Credential {
 		return this;
 	}
 
+	hashPassword (password) {
+		let salt = bcrypt.genSaltSync(10);
+		this.password = bcrypt.hashSync(password, salt);
+		return this;
+	}
 }
 
 module.exports = Credential;

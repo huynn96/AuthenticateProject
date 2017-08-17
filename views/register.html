@@ -2,54 +2,54 @@
 {% extends '_layout.html' %}
 
 {% block content %}
-<form class="form-horizontal">
+<form class="form-horizontal" action="/register" method="post">
     <div class="form-group">
         <div class="col-md-2"></div>
         <label class="control-label col-sm-2" for="user-name">User name:</label>
         <div class="col-sm-4">
-            <input type="text" class="form-control" id="user-name" placeholder="Your user name" required>
+            <input type="text" class="form-control" id="user-name" name='username' placeholder="Your user name" required>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-2"></div>
         <label class="control-label col-sm-2" for="pwd">Password:</label>
         <div class="col-sm-4">
-            <input type="password" class="form-control" id="pwd" placeholder="Your password" required>
+            <input type="password" class="form-control" id="pwd" name='password' placeholder="Your password" required>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-2"></div>
         <label class="control-label col-sm-2" for="confirm-pwd">Confirm Password:</label>
         <div class="col-sm-4">
-            <input type="password" class="form-control" id="confirm-pwd" placeholder="Confirm password" required>
+            <input type="password" class="form-control" id="confirm-pwd" name='password2' placeholder="Confirm password" required>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-2"></div>
         <label class="control-label col-sm-2" for="full-name">Full name:</label>
         <div class="col-sm-4">
-            <input type="text" class="form-control" id="full-name" placeholder="Your full name" required>
+            <input type="text" class="form-control" id="full-name" name='fullname' placeholder="Your full name" required>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-2"></div>
         <label class="control-label col-sm-2" for="email">Your email:</label>
         <div class="col-sm-4">
-            <input type="email" class="form-control" id="email" placeholder="Your email" required>
+            <input type="email" class="form-control" id="email" name='email' placeholder="Your email" required>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-2"></div>
         <label class="control-label col-sm-2" for="address">Your address:</label>
         <div class="col-sm-4">
-            <input type="text" class="form-control" id="address" placeholder="Your address" required>
+            <input type="text" class="form-control" id="address" name='address' placeholder="Your address">
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-2"></div>
         <label class="control-label col-sm-2" for="pwd">Your avatar:</label>
         <div class="col-sm-4">
-            <input type="file" class="" id="avatar" required>
+            <input type="file" class="" id="avatar" name='avatar' >
         </div>
     </div>
     <div class="form-group">

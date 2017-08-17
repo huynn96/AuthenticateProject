@@ -23,7 +23,7 @@ module.exports = function (req, res, next) {
 				errors: errors
 			});
 		}else{
-			req.credential = new Credential(null, null, username, password);
+			req.credential = new Credential(null, null, username).hashPassword(password);
 			req.profile = new Profile(username, fullname, email, address, avatar);
 			next();
 		}
