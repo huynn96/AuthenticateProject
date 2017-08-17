@@ -51,6 +51,12 @@ app.use(expressValidator({
   }
 }));
 
+//Global Variable
+app.use((req, res, next) => {
+  res.locals.user = req.user || null;
+  next();
+});
+
 app.use(router);
 
 app.use((err, req, res, next) => {

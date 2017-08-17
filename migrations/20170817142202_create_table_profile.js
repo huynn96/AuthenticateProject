@@ -7,10 +7,9 @@ exports.up = function(knex, Promise) {
 		table.string('email');
 		table.string('address');
 		table.string('fullname');
-		table.string('password');
 	});
 };
 
 exports.down = function(knex, Promise) {
-  
+  	return knex.schema.dropTable('profile');
 };

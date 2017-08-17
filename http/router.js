@@ -1,13 +1,14 @@
-var express = require('express');
+const express 						= require('express');
+const AuthController 				= require('./controller/AuthController');
+const registerValidatorMiddlewre 	= require('./middleware/register-validator-middleware');
+const userExistedMiddleware			= require('./middleware/user-existed-middleware');
 
 let router = express.Router();
 
-router.get('/register', (req, res, next) => {
-	res.render('register.html');
-});
+router.get('/register', AuthController.getRegister);
 
-router.get('/login', (req, res, next) => {
-	res.render('login.html');
-});
+router.post('/register', userExistedMiddleware, registerValidatorMiddlewre, AuthController.postRegister)
+
+router.get('/login', AuthController.getLogin);
 
 module.exports = router;
