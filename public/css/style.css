@@ -6,6 +6,11 @@
     margin-top: 10px;
 }
 
+.image .image-detail img{
+    width: 160px;
+    height: 100px;
+}
+
 .detail-transfer {
     text-align: center;
     margin-top: 10px;

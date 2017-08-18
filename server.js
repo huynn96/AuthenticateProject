@@ -38,6 +38,7 @@ app.use(session({
 //Passport Init
 app.use(passport.initialize());
 app.use(passport.session());
+require('./passport')(passport);
 
 // Express Validator
 app.use(expressValidator({

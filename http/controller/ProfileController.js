@@ -1,5 +1,14 @@
+const DBConnection 		= require('../../DBConnection');
+const ProfileStore = require('../../profile/ProfileStore');
+
+let profileStore = new ProfileStore(DBConnection);
+
 function getProfile(req, res, next) {
-	res.render('detail.html');
+	profileStore.getProfileByCredentialId(req.user.id)
+		.then((profile) => {
+			res.render('profile.html', {profile: profile});
+		})
+		.catch(next);
 }
 
 exports.getProfile = getProfile;
