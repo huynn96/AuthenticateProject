@@ -19,3 +19,15 @@
 .detail-transfer .change-pw {
     margin-left: 40px;
 }
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.google-plus {
+    background-color: #cc181e;
+}
