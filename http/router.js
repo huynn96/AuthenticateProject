@@ -23,6 +23,8 @@ router.post('/login',
 	})
 );
 
+router.get('/logout', AuthController.logout);
+
 router.get('/profile', ensureAuthenticatedMiddleware, ProfileController.getProfile);
 
 module.exports = router;

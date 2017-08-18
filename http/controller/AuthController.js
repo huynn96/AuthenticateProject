@@ -30,6 +30,13 @@ function postRegister (req, res, next) {
 	});
 }
 
+function logout (req, res, next) {
+	req.logout();
+	req.flash('success_msg', 'You are logged out');
+	res.redirect('/login');
+}
+
 exports.getRegister = getRegister;
 exports.postRegister = postRegister;
 exports.getLogin = getLogin;
+exports.logout = logout;
