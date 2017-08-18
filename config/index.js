@@ -5,5 +5,11 @@ module.exports = {
         password: process.env.DB_PASSWORD,
         database: process.env.DB_DATABASE
     },
-    port: process.env.PORT
+    port: process.env.PORT,
+    'facebookAuth': {
+		'clientID': '1391089104277518',
+		'clientSecret': '44935eca3a36aad9e0ba7fd8be4e146c',
+		'callbackURL': 'http://localhost:8000/login/facebook/callback',
+		'profileFields': ['id', 'displayName', 'photos', 'emails']
+	}
 }

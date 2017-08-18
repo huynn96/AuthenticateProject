@@ -23,6 +23,9 @@ router.post('/login',
 	})
 );
 
+router.get('/login/facebook', passport.authenticate('facebook', {scope: 'email'}));
+router.get('/login/facebook/callback',passport.authenticate('facebook', { successRedirect: '/profile', failureRedirect: '/login' }));
+
 router.get('/logout', AuthController.logout);
 
 router.get('/profile', ensureAuthenticatedMiddleware, ProfileController.getProfile);
