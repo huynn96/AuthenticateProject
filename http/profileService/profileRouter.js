@@ -6,4 +6,6 @@ let router = express.Router();
 
 router.get('/', ensureAuthenticatedMiddleware, ProfileController.getProfile);
 
+router.get('/edit', ensureAuthenticatedMiddleware, ProfileController.getEditProfile);
+
 module.exports = router;

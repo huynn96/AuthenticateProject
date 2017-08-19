@@ -1,4 +1,4 @@
-{% set title='Detail' %}
+{% set title='Profile' %}
 {% extends '_layout.html' %}
 
 {% block content %}
@@ -15,8 +15,8 @@
     <p><strong>Your Address: </strong>{{ profile.address }}</p>
 </div>
 <div class="detail-transfer">
-    <a href="/edit">Edit</a>
-    <a href="/password" class="change-pw">Change Password</a>
+    <a href="/profile/edit">Change Profile</a>
+    <a href="/changePassword" class="change-pw">Change Password</a>
     <a href="/logout" class="change-pw">Logout</a>
 </div>
 {% endblock %}

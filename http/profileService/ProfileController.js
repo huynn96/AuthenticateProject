@@ -11,4 +11,9 @@ function getProfile(req, res, next) {
 		.catch(next);
 }
 
+function getEditProfile(req, res, next) {
+	res.render('changeProfile.html', )
+}
+
 exports.getProfile = getProfile;
+exports.getEditProfile = getEditProfile;
