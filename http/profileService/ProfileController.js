@@ -12,7 +12,7 @@ function getProfile(req, res, next) {
 }
 
 function getEditProfile(req, res, next) {
-	res.render('changeProfile.html', )
+	res.render('changeProfile.html');
 }
 
 exports.getProfile = getProfile;
