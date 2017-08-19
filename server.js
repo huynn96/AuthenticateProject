@@ -22,9 +22,8 @@ nunjucks.configure('./views', {
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Body Parser
-app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
-
+app.use(bodyParser.urlencoded({ extended: false}));
 app.use(flash());
 app.use(cookieParser());
 

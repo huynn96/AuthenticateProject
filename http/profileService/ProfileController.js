@@ -1,5 +1,5 @@
 const DBConnection 		= require('../../database/DBConnection');
-const ProfileStore = require('../../profile/ProfileStore');
+const ProfileStore 		= require('../../profile/ProfileStore');
 
 let profileStore = new ProfileStore(DBConnection);
 
