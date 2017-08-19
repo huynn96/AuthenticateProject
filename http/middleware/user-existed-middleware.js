@@ -1,4 +1,4 @@
-const DBConnection 		= require('../../DBConnection');
+const DBConnection 		= require('../../database/DBConnection');
 
 module.exports = function (req, res, next) {
 	let username = req.body.username;

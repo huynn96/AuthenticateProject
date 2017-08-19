@@ -1,4 +1,4 @@
-const DBConnection 	= require('../DBConnection');
+const DBConnection 	= require('../../../database/DBConnection');
 const local  		= require('./provider/local');
 const facebook 		= require('./provider/facebook');
 

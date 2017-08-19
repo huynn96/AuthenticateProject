@@ -1,5 +1,5 @@
 const passport 			= require('passport');
-const DBConnection 		= require('../../DBConnection');
+const DBConnection 		= require('../../database/DBConnection');
 const ProfileStore		= require('../../profile/ProfileStore');
 const Profile 			= require('../../profile/Profile');
 
@@ -18,7 +18,6 @@ function postRegister (req, res, next) {
 		if (err) {
 			next(err);
 		} else {
-			req.credential.setId(result.insertId);
 			req.profile.setCredentialId(result.insertId);
 			profileStore.createProfile(req.profile)
 				.then((profile) => {
