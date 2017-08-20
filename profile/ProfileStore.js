@@ -37,6 +37,20 @@ class ProfileStore {
 		});
 	}
 
+	updateProfile (profile) {
+		let query = "update profile set fullname=?, email=?, address=?, avatar=? where credentialId=?";
+
+		return new Promise((resolve, reject) => {
+			this.mysqlConnection.query(query, [profile.fullname, profile.email, profile.address, profile.avatar, profile.credentialId], (err, result) => {
+				if (err) {
+					reject(err);
+				} else {
+					resolve(profile);
+				}
+			});
+		});
+	}
+
 }
 
 module.exports = ProfileStore;

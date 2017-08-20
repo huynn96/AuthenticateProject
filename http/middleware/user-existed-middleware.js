@@ -7,7 +7,7 @@ module.exports = function (req, res, next) {
 
 	DBConnection.query(query, [username], (err, result) => {
 		if (err) {
-			reject(err);
+			console.log(err);
 		} else {
 			if (result.length){
 				res.render('register.html',{

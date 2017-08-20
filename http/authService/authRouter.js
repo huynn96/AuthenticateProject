@@ -4,8 +4,13 @@ const AuthController 				  = require('./AuthController');
 const registerValidatorMiddlewre 	  = require('../middleware/register-validator-middleware');
 const userExistedMiddleware			  = require('../middleware/user-existed-middleware');
 const ensureUnauthenticatedMiddleware = require('../middleware/ensure-unauthenticate-middleware');
+const ensureAuthenticatedMiddleware = require('../middleware/ensure-authenticate-middleware');
 
 let router = express.Router();
+
+router.get('/', ensureAuthenticatedMiddleware, (req, res, next) => {
+	res.redirect('/profile');
+});
 
 router.get('/register', ensureUnauthenticatedMiddleware, AuthController.getRegister);
 

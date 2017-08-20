@@ -6,7 +6,7 @@
     margin-top: 10px;
 }
 
-.image .image-detail img{
+.avatar{
     width: 160px;
     height: 100px;
 }
@@ -30,4 +30,12 @@
 
 .google-plus {
     background-color: #cc181e;
+}
+
+#uploadImage {
+    margin-top: 5px;
+}
+
+#inputImage {
+    display: none
 }

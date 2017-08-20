@@ -17,12 +17,19 @@ function postImage(req, res, next) {
         if (err) {
         	next(err);
         }
-        console.log(req.file);
-
-        res.json({
-            status: 'success', 
-            link: `/image/${req.file.filename}` 
-        });
+        if (req.file){
+            console.log(req.file);
+            res.json({
+                status: 'success', 
+                link: `http://${process.env.DB_HOST}:${process.env.PORT}/image/${req.file.filename}` 
+            });
+        }
+        else {
+            res.json({
+                status: 'fail'
+            });
+        }
+        
     });
 }
 
