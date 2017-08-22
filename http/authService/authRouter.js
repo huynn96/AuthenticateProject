@@ -25,9 +25,12 @@ router.post('/login',
 		failureFlash: true
 	})
 );
-
+//facebook
 router.get('/login/facebook', passport.authenticate('facebook', {scope: 'email'}));
 router.get('/login/facebook/callback',passport.authenticate('facebook', { successRedirect: '/profile', failureRedirect: '/login' }));
+//twitter
+router.get('/login/twitter', passport.authenticate('twitter'));
+router.get('/login/twitter/callback',passport.authenticate('twitter', { successRedirect: '/profile', failureRedirect: '/login' }));
 
 router.get('/logout', AuthController.logout);
 
