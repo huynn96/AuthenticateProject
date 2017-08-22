@@ -11,6 +11,14 @@ function getProfile (req, res, next) {
 		.catch(next);
 }
 
+function getProfiles(req, res, next) {
+	profileStore.getProfiles()
+		.then((profiles) => {
+			res.render('list-profiles.html',{profiles: profiles});
+		})
+		.catch(next);
+}
+
 function getEditProfile (req, res, next) {
 	profileStore.getProfileByCredentialId(req.user.id)
 		.then((profile) => {
@@ -29,5 +37,6 @@ function putProfile (req, res, next) {
 }
 
 exports.getProfile = getProfile;
+exports.getProfiles = getProfiles;
 exports.getEditProfile = getEditProfile;
 exports.putProfile = putProfile;

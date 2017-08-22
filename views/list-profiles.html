@@ -1,0 +1,31 @@
+{% set title='List Profile' %}
+{% extends '_layout.html' %}
+
+{% block content %}
+<form>
+    <input class="fa fa-search" placeholder="Tm Kiem">
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>USER NAME</th>
+            <th>FULL NAME</th>
+            <th>EMAIL</th>
+            <th>ADDRESS</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for profile in profiles %}
+        <tr>
+            <td>{{profile.id}}</td>
+            <td>{{profile.username}}</td>
+            <td>{{profile.fullname}}</td>
+            <td>{{profile.email}}</td>
+            <td>{{profile.address}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

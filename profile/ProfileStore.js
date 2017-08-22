@@ -22,6 +22,24 @@ class ProfileStore {
 		});
 	}
 
+    getProfiles () {
+        let query = "select * from profile";
+
+        return new Promise((resolve, reject) => {
+            this.mysqlConnection.query(query, (err, result) => {
+                if(err) {
+                    reject(err);
+                } else {
+                    if(result.length) {
+                        resolve(result);
+                    } else {
+                        resolve(null);
+                    }
+                }
+            })
+        })
+    }
+
 	createProfile (profile) {
 		let query = "insert into profile set ?";
 

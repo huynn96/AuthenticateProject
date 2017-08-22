@@ -7,6 +7,8 @@ let router = express.Router();
 
 router.get('/', ensureAuthenticatedMiddleware, ProfileController.getProfile);
 
+router.get('/list', ProfileController.getProfiles);
+
 router.get('/edit', ensureAuthenticatedMiddleware, ProfileController.getEditProfile);
 
 router.post('/', ensureAuthenticatedMiddleware, updateProfileValidatorMiddleware, ProfileController.putProfile);
