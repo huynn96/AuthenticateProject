@@ -17,30 +17,5 @@ $(document).ready(() => {
             }
         })
     });
-
-    // $('#updateProfile').click((e) => {
-    //     e.preventDefault();
-    //     let profile = {
-    //         username: $('#username').val();
-    //         fullname: $('#fullname').val();
-    //         email: $('#email').val();
-    //         address: $('#address').val();
-    //         avatar: $('#avatar').val();
-    //         id: $('#id').val();
-    //         credentialId: $('#credentialId').val();
-    //     }
-
-    //     $.ajax({
-    //         url: `/profile`,
-    //         type: "PUT",
-    //         data: book,
-    //     }).then(() => {
-    //         alert("Edit book successfully");
-    //         window.location.href = "/books";
-    //     }, (err) => {
-    //         console.log(err);
-    //         displayError(err);
-    //     });
-
-    // })
+    
 });
