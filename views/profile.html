@@ -3,20 +3,24 @@
 
 {% block content %}
 
-<div class="image">
-    <div class="col-lg-3"></div>
-    <div class="col-md-2 image-detail"><img class="avatar" src="{{ profile.avatar }}"></div>
-    <div class="col-lg-7"></div>
-</div>
-<div>
-    <p><strong>User Name: </strong>{{ profile.username }}</p>
-    <p><strong>Full Name: </strong>{{ profile.fullname }}</p>
-    <p><strong>Your Email: </strong>{{ profile.email }}</p>
-    <p><strong>Your Address: </strong>{{ profile.address }}</p>
-</div>
-<div class="detail-transfer">
-    <a href="/profile/edit">Change Profile</a>
-    <a href="/changePassword" class="change-pw">Change Password</a>
-    <a href="/logout" class="change-pw">Logout</a>
+<div class='col-md-3'></div>
+<div class='col-md-6'> 
+    <div class='col-md-5'> 
+        <div class="image img-thumbnail">
+            <img class="avatar" src="{{ profile.avatar }}">
+        </div>
+    </div>
+    <div class='col-md-7 well'>
+        <div>
+            <p><strong>User Name: </strong>{{ profile.username }}</p>
+            <p><strong>Full Name: </strong>{{ profile.fullname }}</p>
+            <p><strong>Your Email: </strong>{{ profile.email }}</p>
+            <p><strong>Your Address: </strong>{{ profile.address }}</p>
+        </div>
+    </div>
+    <div class="detail-transfer">
+        <a href="/profile/edit">Change Profile</a>
+        <a href="/changePassword" class="change-pw">Change Password</a>
+    </div>
 </div>
 {% endblock %}

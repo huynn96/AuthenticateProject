@@ -31,6 +31,12 @@ router.get('/login/facebook/callback',passport.authenticate('facebook', { succes
 //twitter
 router.get('/login/twitter', passport.authenticate('twitter'));
 router.get('/login/twitter/callback',passport.authenticate('twitter', { successRedirect: '/profile', failureRedirect: '/login' }));
+//google
+router.get('/login/google', passport.authenticate('google', { scope: [
+	'https://www.googleapis.com/auth/userinfo.profile',
+    'https://www.googleapis.com/auth/userinfo.email'
+] }));
+router.get('/login/google/callback', passport.authenticate('google', { successRedirect: '/profile', failureRedirect: '/login' }));
 
 router.get('/logout', AuthController.logout);
 

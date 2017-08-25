@@ -10,7 +10,17 @@
 	<script type="text/javascript" src='/js/index.js'></script>
 </head>
 <body>
-	<h1 style="text-align: center">{{ title }}</h1>
+	<div class='clearfix'>
+		<div class='col-md-1'></div>
+		<div class='col-md-10'>
+			<h1 style="text-align: center">{{ title }}</h1>
+		</div>
+		<div class='col-md-1'>
+			{% if user %}
+		    <a class='logout' href="/logout">Logout</a>
+			{% endif %}
+		</div>
+	</div>
 	<hr>
 	
 	<div class="container container-fluid">

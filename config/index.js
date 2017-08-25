@@ -16,5 +16,10 @@ module.exports = {
         consumerKey: 'gLNCMVE2ngvnz3f2QpoF21vOF',
         consumerSecret: 'yjDeRXwed3zFAOBnFcgrgDRfbLOWMnLAYgmIFOM6HTgmjEgJra',
         callbackURL: "http://localhost:8000/login/twitter/callback"
+    },
+    googleAuth: {
+        clientID: '95589102743-a2innufcl907aepg27n0sf7h5lr60uc9.apps.googleusercontent.com',
+        clientSecret: 'tjIkJ7RV8L3cutlhUnRA4WCG',
+        callbackURL: "http://localhost:8000/login/google/callback"
     }
 }
